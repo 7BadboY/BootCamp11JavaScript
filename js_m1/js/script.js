@@ -631,27 +631,27 @@
 */  
 
 
-// const adminLogin = 'admin';
-// const adminPassword = 'm4ngo1zh4ackz0r';
-// let loginValid;
+const adminLogin = 'admin';
+const adminPassword = 'm4ngo1zh4ackz0r';
+let loginValid;
 
-// let userInput = prompt('Введите логин');
-// if (userInput === null) {
-//     alert('Отменено пользователем!')
-// } else if (userInput === adminLogin) {
-//     loginValid = prompt('Введите пароль')
-//     if (loginValid !== adminPassword && loginValid !== null) {
-//         alert('Доступ запрещен, неверный пароль!')
-//     } else if (loginValid === adminPassword) {
-//         alert('Добро пожаловать!')
-//     } else if (loginValid === null) {
-//         alert('Отменено пользователем!')
-//     } else {
-//         alert('всего доброго')
-//     }
-// } else {
-//     alert('Доступ запрещен, неверный логин!')
-// }; 
+let userInput = prompt('Введите логин');
+if (userInput === null) {
+    alert('Отменено пользователем!')
+} else if (userInput === adminLogin) {
+    loginValid = prompt('Введите пароль')
+    if (loginValid !== adminPassword && loginValid !== null) {
+        alert('Доступ запрещен, неверный пароль!')
+    } else if (loginValid === adminPassword) {
+        alert('Добро пожаловать!')
+    } else if (loginValid === null) {
+        alert('Отменено пользователем!')
+    } else {
+        alert('всего доброго')
+    }
+} else {
+    alert('Доступ запрещен, неверный логин!')
+}; 
 
 
 //========================     Работа с if-else ========
@@ -708,13 +708,22 @@
 
 //  Если переменная a равна нулю или равна двум, то прибавьте к ней 7, иначе поделите ее на 10. Выведите новое значение переменной на экран. Проверьте работу скрипта при a, равном 5, 0, -3, 2.
 
-
+// let a = Number(prompt());
+// a === 0 || a === 2 ? console.log(a + 7) : console.log(a / 10);
 
 //  Если переменная a равна или меньше 1, а переменная b больше или равна 3, то выведите сумму этих переменных, иначе выведите их разность (результат вычитания). Проверьте работу скрипта при a и b, равном 1 и 3, 0 и 6, 3 и 5.
+// let a = 3;
+// let b = 5;
+
+// a <= 1 && b >= 3 ? console.log(a + b) : console.log(a - b);
+
 
 //  Если переменная a больше 2-х и меньше 11-ти, или переменная b больше или равна 6-ти и меньше 14-ти, то выведите 'Верно', в противном случае выведите 'Неверно'.
 
+// let a = 1; 
+// let b = 1;
 
+// a > 2 && a < 11 || b >= 6 && b < 14 ? console.log('true') : console.log('false');
 
 
 
