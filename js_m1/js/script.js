@@ -631,27 +631,27 @@
 */  
 
 
-const adminLogin = 'admin';
-const adminPassword = 'm4ngo1zh4ackz0r';
-let loginValid;
+// const adminLogin = 'admin';
+// const adminPassword = 'm4ngo1zh4ackz0r';
+// let loginValid;
 
-let userInput = prompt('Введите логин');
-if (userInput === null) {
-    alert('Отменено пользователем!')
-} else if (userInput === adminLogin) {
-    loginValid = prompt('Введите пароль')
-    if (loginValid !== adminPassword && loginValid !== null) {
-        alert('Доступ запрещен, неверный пароль!')
-    } else if (loginValid === adminPassword) {
-        alert('Добро пожаловать!')
-    } else if (loginValid === null) {
-        alert('Отменено пользователем!')
-    } else {
-        alert('всего доброго')
-    }
-} else {
-    alert('Доступ запрещен, неверный логин!')
-}; 
+// let userInput = prompt('Введите логин');
+// if (userInput === null) {
+//     alert('Отменено пользователем!')
+// } else if (userInput === adminLogin) {
+//     loginValid = prompt('Введите пароль')
+//     if (loginValid !== adminPassword && loginValid !== null) {
+//         alert('Доступ запрещен, неверный пароль!')
+//     } else if (loginValid === adminPassword) {
+//         alert('Добро пожаловать!')
+//     } else if (loginValid === null) {
+//         alert('Отменено пользователем!')
+//     } else {
+//         alert('всего доброго')
+//     }
+// } else {
+//     alert('Доступ запрещен, неверный логин!')
+// }; 
 
 
 //========================     Работа с if-else ========
@@ -725,8 +725,103 @@ if (userInput === null) {
 
 // a > 2 && a < 11 || b >= 6 && b < 14 ? console.log('true') : console.log('false');
 
+//====================== Additional tasks ==========
+
+// В переменной day лежит какое-то число из интервала от 1 до 31. Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+
+// let day = Number.parseInt(Math.random() * 31 + 1);
+
+// if (day >= 1 && day <= 10) {
+//   console.log('1st decade');
+// } else if (day >= 11 && day <= 20) {
+//   console.log('2nd decade');
+// } else {
+//   console.log('3rd decade');
+// };
+// console.log(day);
+
+//  В переменной month лежит какое-то число из интервала от 1 до 12. Определите в какую пору года попадает этот месяц (зима, лето, весна, осень).
+
+// let month = Number.parseInt(Math.random() * 12 + 1);
+
+// if (month === 12 || month <= 2) {
+//   alert(`${month} month: winter`);
+// } else if (month >= 3 && month <= 6) {
+//   alert(`${month} month: spring`);
+// } else if (month >= 7 && month <= 10) {
+//   alert(`${month} month: summer`);
+// } else {
+//   alert (`${month} month: autumn`);
+// };
+
+//  Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что первым символом этой строки является буква 'a'. Если это так - выведите 'да', в противном случае выведите 'нет'.
+
+// let str = 'abcde';
+
+// if (str[0] === 'a') {
+//   console.log("yes");
+// } else {
+//   console.log('no');
+// };
+
+//  Дана строка с цифрами, например, '12345'. Проверьте, что первым символом этой строки является цифра 1, 2 или 3. Если это так - выведите 'да', в противном случае выведите 'нет'.
+
+// let numStr = '12345';
+
+// if (parseInt(numStr[0]) === 1 || parseInt(numStr[0]) === 2 || parseInt(numStr[0]) === 3) {
+//   console.log('yes');
+// } else {
+//   console.log('No');  
+// };
+
+//  Дана строка из 3-х цифр. Найдите сумму этих цифр. То есть сложите как числа первый символ строки, второй и третий.
+
+// let numStr = "479";
+
+// let newStr = parseInt(numStr[0]) + parseInt(numStr[1]) + parseInt(numStr[2]);
+
+// console.log(newStr);
+
+//  Дана строка из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'.
+ 
+// let numStr = "444443";
+
+// let sumFrts = parseInt(numStr[0]) + parseInt(numStr[1]) + parseInt(numStr[2]);
+// let sumScdn = parseInt(numStr[3]) + parseInt(numStr[4]) + parseInt(numStr[5]);
+// sumFrts === sumScdn ? console.log('yes') : console.log('no');
 
 
+
+
+ //================== *plus task ============ 
+
+//  Создайте программу, которая выводит надбавку за стаж. Пользователь вводит стаж работы, а программа пишет ему надбавку.
+
+/*Стаж от	Стаж до	Надбавка
+0	3 лет	0%
+3 лет	10 лет	10%
+10 лет	20 лет	20%
+20 лет	выше	25%
+Учтите вариант ошибки – пользователь вводит отрицательное число.*/
+
+const exp = Number(prompt('Введите ваш стаж'));
+let bonuses;
+
+if (exp >= 0 && exp <= 3) {
+  bonuses = "0%";
+  alert(`У вас надбавка ${bonuses}`); 
+} else if (exp > 3 && exp <= 10) {
+  bonuses = "10%";
+  alert(`У вас надбавка ${bonuses}`);
+} else if (exp > 10 && exp <= 20) {
+  bonuses = "20%";
+  alert(`У вас надбавка ${bonuses}`);
+} else if (exp > 20) {
+  bonuses = '25%';
+  alert(`У вас надбавка ${bonuses}`);
+} else {
+  alert('Извините введите ваш стаж');
+}
 
 
 
