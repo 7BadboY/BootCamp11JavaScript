@@ -495,6 +495,10 @@
 //     if (ask !== null && ask !== 0 && Number(ask) ) {arr.push(ask)};
 // } while (ask !== null); 
 
+//     console.log(arr);
+// } while (ask !== null); 
+
+
 // for (let el of arr) {
 //     result += Number(el);
 // }
@@ -533,6 +537,21 @@
 
 // const numbers = [12, 15, 25, 37, 41];
 
+// let min = numbers[0];
+// let max = numbers[numbers.length -1];
+// let userInput = prompt(`Enter number from ${min} to ${max}`);
+
+// const isNumber = !Number.isNaN(Number(userInput));
+// if (isNumber) {
+//   if (numbers.includes(Number(userInput))) {
+//     alert("You'r right");
+//   } else {
+//     alert("You'r not right");
+//   }
+// } else {
+//   alert("It's not a number");
+// };
+
 
 //========================== ***ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ*** =====================
 
@@ -557,9 +576,9 @@
       в массив чисел не нужно, после чего снова пользователю предлагается ввести число в prompt.
 */
 
-// let userInput;
-// const numbers = [];
-// let total = 0;
+let userInput;
+const numbers = [];
+let total = 0;
 
 
 //========================== ***ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ*** =====================
@@ -592,3 +611,5 @@
 
 // const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 // let attempts = 3;
+
+auto run command
