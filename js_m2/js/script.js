@@ -486,19 +486,19 @@
     скрипт выводит сумму всех значений массива: "Сумма: <сумма всех значений в массиве>"
     Используйте цикл for...of
 */
-let ask;
-let arr = [];
-let result = 0;
+// let ask;
+// let arr = [];
+// let result = 0;
 
-do { 
-    ask = prompt('Enter number');
-    if (ask !== null && ask !== 0 && Number(ask) ) {arr.push(ask)};
-} while (ask !== null); 
+// do { 
+//     ask = prompt('Enter number');
+//     if (ask !== null && ask !== 0 && Number(ask) ) {arr.push(ask)};
+// } while (ask !== null); 
 
-for (let el of arr) {
-    result += Number(el);
-}
-console.log(`Сумма: ${result}`);
+// for (let el of arr) {
+//     result += Number(el);
+// }
+// console.log(`Сумма: ${result}`);
 
 
 
