@@ -57,44 +57,73 @@
 
 // //=============================== task 05 =======================
 // // Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
-let isEven = (num) => {
-    if (num % 2 === 0) {
-        return true;
-    } return false;
-} 
-console.log(isEven(2));
+// let isEven = (num) => {
+//     if (num % 2 === 0) {
+//         return true;
+//     } return false;
+// } 
+// console.log(isEven(2));
 
-// //=============================== task 06 =======================
+// // //=============================== task 06 =======================
 
-// // Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-let newArr = [];
+// // // Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+// let newArr = [];
 
-for (let el of arr) {
-    if (isEven(el) === true) {
-        newArr.push(el);
-    }
-} 
-console.log(newArr);
+// for (let el of arr) {
+//     if (isEven(el) === true) {
+//         newArr.push(el);
+//     }
+// } 
+// console.log(newArr);
 
 // //=============================== task 07 =======================
 
 // // Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой
 
-// // var str ='abcde abcde abcde';
-// // var newArr = [];
+// let str ='abcde abcde abcde';
+// let newArr = [];
+
+// let mass = str.split(' ');
+// // console.log(mass);
+
+// for (let i = 0; i < mass.length; i++) {
+//     newArr.push(ucfirst(mass[i]));
+//     // console.log(mass[i]);
+//     let newStr = newArr.join(' ');
+//     function ucfirst (str) {
+//         return str[0].toUpperCase() + str.substr(1);
+//     }
+//     console.log(newStr);
+// }
 
 // //=============================== task 08 =======================
 
 // // Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. Функция должна возвращать true или false
 
-// // var str = 'яблоко';
-// // var arr = ['банан', 'яблоко', 'персик'];
-// // console.log(inArray(str, arr));
+// var str = 'яблоко';
+// var arr = ['банан', 'яблоко', 'персик'];
+
+// let inArray = () => {
+//     if (arr.includes(str)) {
+//         return true;
+//     } false;
+// }
+// console.log(inArray(str, arr));
 
 // //=============================== task 09 =======================
 
 // // Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число)
+
+// function getDivisors (num) {
+//     let arr = [];
+//     for (let i = 0; i <= num; i ++) {
+//         if (num % i === 0) {
+//             arr.push(i);
+//         }
+//     } return arr;
+// }
+// console.log(getDivisors(150));
 
 // //=============================== task 10 =======================
 
@@ -106,14 +135,19 @@ console.log(newArr);
 //   строку "Even" если число четное и строку "Odd" если не четное.
 // */
 
+function checkNumberType(num) {
+    if (num % 2 !== 0) {
+        return 'Odd';
+    } return "Even";
+}
 // // Вызовы функции для проверки
-// console.log( checkNumberType(2) ); // 'Even'
+console.log( checkNumberType(2) ); // 'Even'
 
-// console.log( checkNumberType(46) ); // 'Even'
+console.log( checkNumberType(46) ); // 'Even'
 
-// console.log( checkNumberType(3) ); // 'Odd'
+console.log( checkNumberType(3) ); // 'Odd'
 
-// console.log( checkNumberType(17) ); // 'Odd'
+console.log( checkNumberType(17) ); // 'Odd'
 
 
 // //=============================== task 11 =======================
