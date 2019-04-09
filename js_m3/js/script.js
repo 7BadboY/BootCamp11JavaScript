@@ -85,7 +85,7 @@
 // let newArr = [];
 
 // let mass = str.split(' ');
-// console.log(mass); 
+// // console.log(mass);
 
 // for (let i = 0; i < mass.length; i++) {
 //     newArr.push(ucfirst(mass[i]));
@@ -96,34 +96,34 @@
 //     }
 //     console.log(newStr);
 // }
+
 // //=============================== task 08 =======================
 
 // // Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. Функция должна возвращать true или false
 
 // var str = 'яблоко';
 // var arr = ['банан', 'яблоко', 'персик'];
+
 // let inArray = () => {
 //     if (arr.includes(str)) {
 //         return true;
-//     } return false;
+//     } false;
 // }
-
 // console.log(inArray(str, arr));
 
 // //=============================== task 09 =======================
 
 // // Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число)
 
-//  function getDivisors (num) {
-//         let arr = [];
-//         for (let i = 0; i <= num; i ++) {
-//             if (num % i === 0) {
-//                 arr.push(i);
-//             }
-//         } return arr;
-//     }
-//     console.log(getDivisors(150));
-
+// function getDivisors (num) {
+//     let arr = [];
+//     for (let i = 0; i <= num; i ++) {
+//         if (num % i === 0) {
+//             arr.push(i);
+//         }
+//     } return arr;
+// }
+// console.log(getDivisors(150));
 
 // //=============================== task 10 =======================
 
@@ -140,8 +140,7 @@
 //         return 'Odd';
 //     } return "Even";
 // }
-
-// // Вызовы функции для проверки
+// // // Вызовы функции для проверки
 // console.log( checkNumberType(2) ); // 'Even'
 
 // console.log( checkNumberType(46) ); // 'Even'
@@ -149,7 +148,6 @@
 // console.log( checkNumberType(3) ); // 'Odd'
 
 // console.log( checkNumberType(17) ); // 'Odd'
-
 
 // //=============================== task 11 =======================
 
@@ -163,11 +161,7 @@
 //     возвращает укороченную версию.
 // */
 
-// function formatString(str) {
-//    return str.length < 40 ? str  : str.slice(0, 40) + "..."; 
-// }
-
-// // // Вызовы функции для проверки
+// // Вызовы функции для проверки
 // console.log(
 //     formatString("Curabitur ligula sapien, tincidunt non.")
 //   ); // вернется оригинальная строка
@@ -200,14 +194,6 @@
 //   PS: слова могут быть в произвольном регистре
 // */
 
-// let spam = 'spam';
-// let sale = 'sale';
-
-// function checkForSpam(str) {
-//     if (str.toLowerCase().includes(spam) || str.toLowerCase().includes(sale)) {
-//         return true;
-//     } return false;
-// }
 // // Вызовы функции для проверки
 // console.log( checkForSpam('Latest technology news') ); // false
 
@@ -229,13 +215,6 @@
     
 //   Если была передана не строка, функция возвращает null.
 // */
-
-// function getPx(str) {
-//     if (typeof str === 'string') {
-//        return Number.parseFloat(str);
-//     } return null;
-
-// } 
 
 // // Вызовы функции для проверки
 // console.log( getPx("10px") === 10 ); // true

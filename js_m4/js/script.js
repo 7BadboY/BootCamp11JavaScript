@@ -71,19 +71,19 @@
 // //====================== task08 ==================
 
 // /*  
-//   Напиши скрипт, который, для объекта user, последовательно: 
+  // Напиши скрипт, который, для объекта user, последовательно: 
   
-//     - добавляет поле mood со значением 'happy'
+  //   - добавляет поле mood со значением 'happy'
     
-//     - заменяет значение hobby на 'javascript'
+  //   - заменяет значение hobby на 'javascript'
     
-//     - заменяет значение premium на false
+  //   - заменяет значение premium на false
     
-//     - выводит содержимое объекта user в формате ключ:значение 
-//       используя Object.keys и for...of
+  //   - выводит содержимое объекта user в формате ключ:значение 
+  //     используя Object.keys и for...of
     
-//     - выводит содержимое объекта user в формате ключ:значение 
-//       используя Object.entries и for...of
+  //   - выводит содержимое объекта user в формате ключ:значение 
+  //     используя Object.entries и for...of
 // */
 
 const user = {
@@ -93,7 +93,28 @@ const user = {
     premium: true
   };
   
-  
+ user.mood = 'happy';
+ user.hobby = 'javascript';
+ user.premium = false;
+
+//  console.log(user);
+for (let key in user) {
+  // console.log(user[key]);
+}
+
+const keys = Object.keys(user);
+// console.log(keys);
+for(let key of keys){
+console.log(key);
+} 
+
+
+const entries = Object.entries(user);
+console.log(entries);
+for (let key of entries) {
+  console.log(key);
+}
+
 
 // //====================== task09 ==================
 
