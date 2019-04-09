@@ -199,18 +199,18 @@
   
 //   PS: слова могут быть в произвольном регистре
 // */
-  let checkForSpam = (str) => {
-      let str1 = str.toLowerCase();
-    return str1.includes('spam') || str1.includes('sale') ? true : false;
-  };
-// // Вызовы функции для проверки
-console.log( checkForSpam('Latest technology news') ); // false
+//   let checkForSpam = (str) => {
+//       let str1 = str.toLowerCase();
+//     return str1.includes('spam') || str1.includes('sale') ? true : false;
+//   };
+// // // Вызовы функции для проверки
+// console.log( checkForSpam('Latest technology news') ); // false
 
-console.log( checkForSpam('JavaScript weekly newsletter') ); // false
+// console.log( checkForSpam('JavaScript weekly newsletter') ); // false
 
-console.log( checkForSpam('Get best sale offers now!') ); // true
+// console.log( checkForSpam('Get best sale offers now!') ); // true
 
-console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
+// console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
 
 
 
@@ -224,7 +224,9 @@ console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
     
 //   Если была передана не строка, функция возвращает null.
 // */
-
+//     let getPx = (str) => {
+//        return typeof str === 'string' ? parseFloat(str) : null;
+//     }
 // // Вызовы функции для проверки
 // console.log( getPx("10px") === 10 ); // true
 // console.log( getPx("10.5") === 10.5 ); // true
@@ -241,7 +243,18 @@ console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
   
 //   Важное условие - в строке могут быть только пробелы, символы букв и цифр!
 // */
+// let findLongestWord = (str) => {
+//     let min = 0;
+//     let max;
+//     let arr = str.split(' ');
 
+//     for (let el of arr) {
+//         if (el.length > min) {
+//             min = el.length;
+//             max = el;
+//         }
+//     } return max;
+//  }
 
 // // Вызовы функции для проверки
 // console.log(
@@ -260,24 +273,31 @@ console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
 // //=============================== task 15 =======================
 
 
-// /*  
-//   Напиши функцию findLargestNumber(numbers), 
-//   которая получает массив чисел numbers, и возвращает 
-//   самое большое число в массиве.
-// */
-
-// // Вызовы функции для проверки
-// console.log(
-//     findLargestNumber([1, 2, 3])
-//   ); // 3
+/*  
+  Напиши функцию findLargestNumber(numbers), 
+  которая получает массив чисел numbers, и возвращает 
+  самое большое число в массиве.
+*/
+    let findLargestNumber = (numbers) => {
+        let max = 0;
+        for (let el of numbers) {
+            if (el > max) {
+                max = el;
+            }
+        } return max;
+    };
+// Вызовы функции для проверки
+console.log(
+    findLargestNumber([1, 2, 3])
+  ); // 3
   
-//   console.log(
-//     findLargestNumber([27, 12, 18, 5])
-//   ); // 27
+  console.log(
+    findLargestNumber([27, 12, 18, 5])
+  ); // 27
   
-//   console.log(
-//     findLargestNumber([31, 128, 14, 74])
-//   ); // 128
+  console.log(
+    findLargestNumber([31, 128, 14, 74])
+  ); // 128
   
 
 // //=============================== task 16 =======================
