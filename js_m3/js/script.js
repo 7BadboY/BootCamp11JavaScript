@@ -278,26 +278,26 @@
   которая получает массив чисел numbers, и возвращает 
   самое большое число в массиве.
 */
-    let findLargestNumber = (numbers) => {
-        let max = 0;
-        for (let el of numbers) {
-            if (el > max) {
-                max = el;
-            }
-        } return max;
-    };
-// Вызовы функции для проверки
-console.log(
-    findLargestNumber([1, 2, 3])
-  ); // 3
+//     let findLargestNumber = (numbers) => {
+//         let max = 0;
+//         for (let el of numbers) {
+//             if (el > max) {
+//                 max = el;
+//             }
+//         } return max;
+//     };
+// // Вызовы функции для проверки
+// console.log(
+//     findLargestNumber([1, 2, 3])
+//   ); // 3
   
-  console.log(
-    findLargestNumber([27, 12, 18, 5])
-  ); // 27
+//   console.log(
+//     findLargestNumber([27, 12, 18, 5])
+//   ); // 27
   
-  console.log(
-    findLargestNumber([31, 128, 14, 74])
-  ); // 128
+//   console.log(
+//     findLargestNumber([31, 128, 14, 74])
+//   ); // 128
   
 
 // //=============================== task 16 =======================
@@ -313,6 +313,13 @@ console.log(
 
 // const uniqueNumbers  = [2, 1, 4, 9];
 
+// let addUniqueNumbers = (...num) => {
+//     for (let el of num) {
+//         if (!uniqueNumbers.includes(el)) {
+//             uniqueNumbers.push(el);
+//         }
+//     } return uniqueNumbers;
+// };
 // // Вызовы функции для проверки
 // addUniqueNumbers(1, 2, 3);
 // console.log(
@@ -343,18 +350,23 @@ console.log(
 //   ни с одним из числовых аргументов.
 // */
 
-// const filterFromArray = function(arr) {
-  
-// }; 
+const filterFromArray = function(arr, ...num) {
+  let mass = arr.slice();
+  for (let el of num) {
+      if (mass.includes(el)) {
+          mass.splice(mass.indexOf(el), 1);
+      }
+  } return mass;
+}; 
 
-// // Вызовы функции для проверки
-// console.log(
-//   filterFromArray([1, 2, 3, 4, 5], 2, 4)
-// ); // [1, 3, 5]
+// Вызовы функции для проверки
+console.log(
+  filterFromArray([1, 2, 3, 4, 5], 2, 4)
+); // [1, 3, 5]
 
-// console.log(
-//   filterFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)
-// ); // [12, 8, 17]
+console.log(
+  filterFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)
+); // [12, 8, 17]
 
 
 
