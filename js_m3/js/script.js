@@ -160,7 +160,13 @@
 //     символов и добавляет в конец строки троеточие '...', после чего 
 //     возвращает укороченную версию.
 // */
-
+// let formatString = (str) => {
+//     let arr = str.split('');
+//     if (arr.length >= 40) {
+//         arr.length = 40;
+//         return arr.join('') + '...';
+//     } return str;
+// }
 // // Вызовы функции для проверки
 // console.log(
 //     formatString("Curabitur ligula sapien, tincidunt non.")
@@ -193,15 +199,18 @@
   
 //   PS: слова могут быть в произвольном регистре
 // */
-
+  let checkForSpam = (str) => {
+      let str1 = str.toLowerCase();
+    return str1.includes('spam') || str1.includes('sale') ? true : false;
+  };
 // // Вызовы функции для проверки
-// console.log( checkForSpam('Latest technology news') ); // false
+console.log( checkForSpam('Latest technology news') ); // false
 
-// console.log( checkForSpam('JavaScript weekly newsletter') ); // false
+console.log( checkForSpam('JavaScript weekly newsletter') ); // false
 
-// console.log( checkForSpam('Get best sale offers now!') ); // true
+console.log( checkForSpam('Get best sale offers now!') ); // true
 
-// console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
+console.log( checkForSpam('[SPAM] How to earn fast money?') ); // true
 
 
 
