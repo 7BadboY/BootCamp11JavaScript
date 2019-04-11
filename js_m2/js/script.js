@@ -525,7 +525,7 @@
 //   alert("It's not a number");
 // };
 
-//========================== ***ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ*** =====================
+//========================== ***ДОМАШНЕЕ ЗАДАНИЕ*** =====================
 
 /*
   Написать следующий скрипт:
@@ -552,9 +552,28 @@ let userInput;
 const numbers = [];
 let total = 0;
 
+do {
+  userInput = Number(prompt('enter the number', ''));
+  numbers.push(userInput);
+} while (userInput !== 0);
+numbers.pop (userInput);
+console.log ('Imputed array is: ' + numbers);
 
-//========================== ***ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ*** =====================
+for(let i of numbers) {
+  total += i;
+}
+if (numbers.length >= 1) {
+  alert (`Общая сумма чисел равна ${total}`);
+} else {
+  userInput;
+}
+
+console.log(`Общая сумма чисел равна ${total}`);
+console.log(typeof userInput);
+
 /*
+  ⚠️ ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ - ВЫПОЛНЯТЬ ПО ЖЕЛАНИЮ
+  
   Напишите скрипт имитирующий авторизацию пользователя.
   
   Есть массив паролей зарегистрированных пользователей passwords. 
@@ -579,5 +598,5 @@ let total = 0;
   Если пользователь нажмет Cancel, прекратить выполнение цикла.
 */
 
-// const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
-// let attempts = 3;
+const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
+let attempts = 3;
