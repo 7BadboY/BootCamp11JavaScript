@@ -722,48 +722,48 @@ const users = [
 },
 ];
 
-// /**
-// * Получить массив имен (поле name) всех пользователей
-// */
-const getAllNames = arr => arr.map(el => el.name);
-console.log(getAllNames(users)); 
-// // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+// // /**
+// // * Получить массив имен (поле name) всех пользователей
+// // */
+// const getAllNames = arr => arr.map(el => el.name);
+// console.log(getAllNames(users)); 
+// // // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
                           
-// /**
-// * Получить массив объектов пользователей по цвету глаз (поле eyeColor)
-// */
-const getUsersByEyeColor = (arr, color) => arr.filter(el => el.eyeColor === color);
-console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+// // /**
+// // * Получить массив объектов пользователей по цвету глаз (поле eyeColor)
+// // */
+// const getUsersByEyeColor = (arr, color) => arr.filter(el => el.eyeColor === color);
+// console.log(getUsersByEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
                                           
-// /**
-// * Получить массив имен пользователей по полу (поле gender)
-// */
-const getUsersByGender = (arr, gender) => arr.filter(el => el.gender === gender).map(el => el.name);
-console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// // /**
+// // * Получить массив имен пользователей по полу (поле gender)
+// // */
+// const getUsersByGender = (arr, gender) => arr.filter(el => el.gender === gender).map(el => el.name);
+// console.log(getUsersByGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 
-// /**
-// * Получить массив только неактивных пользователей (поле isActive)
-// */
-const getInactiveUsers = arr => arr.filter(el => !el.isActive);
-console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+// // /**
+// // * Получить массив только неактивных пользователей (поле isActive)
+// // */
+// const getInactiveUsers = arr => arr.filter(el => !el.isActive);
+// console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
                     
                                
-// /**
-// * Получить пользоваля (не массив) по email (поле email, он уникальный)
-// */
-// const getUserByEmail = (arr, email) => {...};
+// // /**
+// // * Получить пользоваля (не массив) по email (поле email, он уникальный)
+// // */
+// const getUserByEmail = (arr, email) => arr.find (el => el.email);
 
 // console.log(getUserByEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
 // console.log(getUserByEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
 
 
-// /**
-// * Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age)
-// */
-// const getUsersWithAge = (arr, min, max) => {...};
+// // /**
+// // * Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age)
+// // */
+// const getUsersWithAge = (arr, min, max) => arr.filter(el => el.age >= min && el.age <= max);
 
 // console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
                                           
@@ -774,7 +774,7 @@ console.log(getInactiveUsers(users)); // [объект Moore Hensley, объек
 // /**
 // * Получить общую сумму баланса (поле balance) всех пользователей
 // */
-// const getTotalBalance = arr => {...};
+// const getTotalBalance = arr => arr.reduce((acc, el) => acc + el.balance, 0);
 
 // console.log(getTotalBalance(users)); // 20916
                               
@@ -782,7 +782,7 @@ console.log(getInactiveUsers(users)); // [объект Moore Hensley, объек
 // /**
 // * Массив имен всех пользователей у которых есть друг с указанным именем
 // */
-// const getUsersByFriend = (arr, name) => {...};
+// const getUsersByFriend = (arr, name) => arr.filter(el => el.friends.find(el => el === name));
 
 // console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 // console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
