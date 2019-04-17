@@ -54,6 +54,15 @@
 //   Создать несколько экземпляров с разными значениями свойств, вывесди их в консоль.
 // */
 
+// const Account = function (login, email) {
+//     this.login = login;
+//     this.email = email;
+// };
+
+// Account.prototype.getInfo = function() {
+//     console.log(`login: ${this.login}, email: ${this.email}`);
+// };
+
 // const account = new Account('Mangozedog', 'mango@dog.woof');
 
 // console.log(Account.prototype.getInfo); // function
@@ -77,16 +86,36 @@
 //     - pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
 // */
 
+// function StringBuilder (string = " ") {
+//     this.value = string;
+    
+//     StringBuilder.prototype.getValue = function() {
+//         console.log(this.value);    
+//     };
+
+//     StringBuilder.prototype.append = function (str) {
+//         builder.value = `${builder.value}${str}`;
+//     };
+
+//     StringBuilder.prototype.prepend = function (str) {
+//         builder.value = `${str}${builder.value}`;
+//     };
+
+//     StringBuilder.prototype.pad = function (str) {
+//         builder.value = `${str}${builder.value}${str}`;
+//     };
+// };
+
 // const builder = new StringBuilder('.');
 
 // builder.append('^'); 
 // console.log(builder.value); // '.^'
 
 // builder.prepend('^'); 
-// console.log(builder.value; // '^.^'
+// console.log(builder.value); // '^.^'
 
 // builder.pad('='); 
-// console.log(builder.value; // '=^.^='
+// console.log(builder.value); // '=^.^='
 // // ==================================================================== task 3 ==================================================
 // /*
 //  * Напиши класс Car с указанными свойствами и методами
