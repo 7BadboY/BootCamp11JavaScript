@@ -131,3 +131,30 @@
 // galleryList.innerHTML = items;
 
 // ================================================================= Task 5 ======================================================
+
+/*
+  Есть список с классом .size-filter из произвольного 
+  количества чекбоксов, каждый из которых содержит 
+  размер одежды в фильтре.
+  
+  Напишите функцию collectInputData(inputs), которая
+  принимает 1 параметр inputs - массив тех инпутов
+  у которых состояние checked.
+  
+  Возвращает массив значений атрибута value.
+*/
+
+let sizeFilter = document.querySelectorAll('.size-filter li label input');
+let arr1 = Array.from(sizeFilter);
+let arr2 = arr1.filter(el => el.checked === true); 
+console.log(arr2);
+
+
+function collectInputData(arr2) {
+  return arr2.map(el => el.value);
+}
+console.log(collectInputData(arr2));
+
+
+
+
