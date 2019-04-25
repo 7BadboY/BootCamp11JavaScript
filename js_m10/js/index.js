@@ -68,34 +68,62 @@
 // }
 // getPhotos(2777).then(data => console.log(data.url));
 
-const newObj = {
-    name: 'Segey',
-    last: 'YarotskiY',
-    car: {
-        first: 'Jaguar',
-        second: 'Aston',
-        third: 'BMW 750i',
-    },
-    kill: true,
-    eat: true,
-    normalLive: false,
+// const newObj = {
+//     name: 'Segey',
+//     last: 'YarotskiY',
+//     car: {
+//         first: 'Jaguar',
+//         second: 'Aston',
+//         third: 'BMW 750i',
+//     },
+//     kill: true,
+//     eat: true,
+//     normalLive: false,
 
-};
+// };
 
-const url = 'https://jsonplaceholder.typicode.com/posts';
+// const url = 'https://jsonplaceholder.typicode.com/posts';
 
-const settings = {
-    method: "POST",
-    body: JSON.stringify(newObj),
-    headers: {
-        "Content-type" : "application/json"
-    }
-};
+// const settings = {
+//     method: "POST",
+//     body: JSON.stringify(newObj),
+//     headers: {
+//         "Content-type" : "application/json"
+//     }
+// };
 
-fetch(url, settings) 
-.then( response => response.json())
-.then(data => console.log(data));
+// fetch(url, settings) 
+// .then( response => response.json())
+// .then(data => console.log(data));
+
+// -----------------------------------localStorage------------------------------
+
+// localStorage.setItem('login', 'Sergey')
+// localStorage.clear('login');
+
+// const newLocal = {
+//     name: 'Bomond',
+//     job: 'hitMan'
+// };
+
+// localStorage.setItem('about', JSON.stringify(newLocal));
+
+// let result = JSON.parse(localStorage.getItem('about'));
+// console.log(result.name, result.job);
 
 
+// let text = document.querySelector('.text'),
+//     input = document.querySelector('.input'),
+//     button = document.querySelector('.btn');
+
+// function writeLocal() {
+//     localStorage.setItem('about', input.value);
+//     getLocal();
+// }
+// function getLocal() {
+//    text.textContent = localStorage.getItem('about', '');
+// }
+// // getLocal();
+// button.addEventListener('click', writeLocal);
 
 
