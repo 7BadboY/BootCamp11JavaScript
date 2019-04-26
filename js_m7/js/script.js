@@ -158,3 +158,5 @@ console.log(collectInputData(arr2));
 
 
 
+
+
