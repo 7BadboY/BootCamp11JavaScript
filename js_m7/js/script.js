@@ -50,7 +50,7 @@
 
 // /*
 //   Дан ul склассом .list и массив строк. 
-  
+
 //   Вставьте элементы этого массива в ul так, чтобы каждый элемент стоял в своем li.
 // */
 
@@ -73,7 +73,7 @@
 
 // /*
 //   Напишите скрипт для создания галлереи изображений. 
-  
+
 //   - На вкладке HTML уже есть ul.gallery.
 //   - Используйте массив объектов для создания тегов img вложенных в li
 //   - Оформление по вкусу, можно и не делать, достаточно чтобы каждое 
@@ -144,19 +144,61 @@
   Возвращает массив значений атрибута value.
 */
 
-let sizeFilter = document.querySelectorAll('.size-filter li label input');
-let arr1 = Array.from(sizeFilter);
-let arr2 = arr1.filter(el => el.checked === true); 
-console.log(arr2);
+// let sizeFilter = document.querySelectorAll('.size-filter li label input');
+// let arr1 = Array.from(sizeFilter);
+// let arr2 = arr1.filter(el => el.checked === true); 
+// console.log(arr2);
 
 
-function collectInputData(arr2) {
-  return arr2.map(el => el.value);
+// function collectInputData(arr2) {
+//   return arr2.map(el => el.value);
+// }
+// console.log(collectInputData(arr2));
+
+// ================================================= Task 6 =============================================
+
+/*
+  Создайте функцию createMovieCard(), которая 
+  создает и возвращает DOM-узел карточки кинофильма.
+  
+  Разметка с классами есть на вкладке HTML.
+  Стили на вкладке CSS.
+  
+  Используйте createElement для создания узлов.
+  Добавьте классы и атрибуты.
+*/
+
+
+function createMovieCard() {
+  let card = document.querySelector('.movie');
+  let img = document.createElement('img');
+  img.className = 'movie__image';
+  img.setAttribute('src', 'http://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg');
+  img.setAttribute('alt', 'movie image');
+  card.append(img);
+
+  let movieBody = document.createElement('div');
+  movieBody.className = 'movie__body';
+  card.append(movieBody);
+
+  let movieTitle = document.createElement('h2');
+  movieTitle.className = 'movie__title';
+  movieTitle.textContent = 'The Godfather';
+  movieBody.append(movieTitle);
+
+  let movieDiscription = document.createElement('p');
+  movieDiscription.className = 'movie__discription';
+  movieDiscription.textContent = "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would - be killers, launching a campaign of bloody revenge.";
+  movieTitle.append(movieDiscription);
+
+  let movieDate = document.createElement('p');
+  movieDate.className = 'movie__date';
+  movieDate.textContent = 'Released: 1972-03-14';
+  movieDiscription.append(movieDate);
+
+  let movieRating = document.createElement('p');
+  movieRating.className = 'movie__rating';
+  movieRating.textContent = 'Rating: 8.6';
+  movieDate.append(movieRating);
 }
-console.log(collectInputData(arr2));
-
-
-
-
-
-
+createMovieCard();
