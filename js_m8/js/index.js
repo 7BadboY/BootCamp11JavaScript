@@ -40,34 +40,64 @@
   - Привяжите вызовы методов и значение счетчика к раметке
 */
 
-class Counter {
-    constructor(onChange) {
-        this.value = 0;
-        this.onChange = onChange;
-        this.increment = this.increment.bind(this);
-        this.decriment = this.decriment.bind(this);
-    }
-    increment() {
-        this.value += 1;
-        this.onChange(this.value);
-    }
-    decriment() {
-        this.value -= 1;
-        this.onChange(this.value);
-    }
-}
+// class Counter {
+//     constructor(onChange) {
+//         this.value = 0;
+//         this.onChange = onChange;
+//         this.increment = this.increment.bind(this);
+//         this.decriment = this.decriment.bind(this);
+//     }
+//     increment() {
+//         this.value += 1;
+//         this.onChange(this.value);
+//     }
+//     decriment() {
+//         this.value -= 1;
+//         this.onChange(this.value);
+//     }
+// }
 
-let plus = document.querySelector('button[data-action = "add"]');
-let minus = document.querySelector('button[data-action = "sub"]');
-let valueSpan = document.querySelector('.value');
+// let plus = document.querySelector('button[data-action = "add"]');
+// let minus = document.querySelector('button[data-action = "sub"]');
+// let valueSpan = document.querySelector('.value');
 
-function changeValue(value) {
-    valueSpan.textContent = value;
-}
+// function changeValue(value) {
+//     valueSpan.textContent = value;
+// }
 
-const counter = new Counter(changeValue);
-console.log(counter.onChange);
+// const counter = new Counter(changeValue);
+// console.log(counter.onChange);
 
-plus.addEventListener('click', counter.increment);
-minus.addEventListener('click', counter.decriment);
+// plus.addEventListener('click', counter.increment);
+// minus.addEventListener('click', counter.decriment);
+
+// ======================================= Task 4 =======================================
+
+/*
+  Есть форма с набором радиокнопок. Пользователь выбирает вариант ответа, 
+  после чего нажимает кнопку "Submit" и происходит отправка формы.
+  
+  При отправке формы:
+    - не должна перезагружаться страница
+    - необходимо получить выбранную опцию и вывести в параграф с классом .result
+*/
+
+// const questionBtn = document.querySelector('.question-form');
+// let userChoise = document.querySelectorAll('input');
+// let userButton = document.querySelector('.btn');
+// let result = document.querySelector('.result');
+
+// function submitForm (event) {
+//   event.preventDefault();
+//   Array.from(userChoise).find(i => i.checked === true ? result.textContent = `Result: ${i.value}` : null);
+
+// }
+// userButton.addEventListener('click', submitForm);
+
+// ======================================= Task 5 =======================================
+
+/*
+  Дан список изображений. Сделайте так, чтобы по клику на картинку 
+  алертом выводился ее src. Обязательно используйте делегирование событий.
+*/
 
