@@ -161,3 +161,24 @@
 // inputParent.addEventListener('click', getResult);
 
 // ======================================= Task 8 =======================================
+
+/*
+  Напишите скрипт который:
+    
+    - При фокусе текстового поля, в p.message рендерит строку "Input is in focus!"
+    - При наборе текста в инпуте (событие input), текущее его значение должно 
+      отображаться в p.input-value 
+*/
+
+// const message = document.querySelector('.message');
+// const input = document.querySelector('.input');
+// const text = document.querySelector('.input-value');
+// input.querySelector('focus', render);
+// function render() {
+//   message.textContent = 'input is in focus!';
+// }
+// function textInput() {
+//   text.textContent = `Current input value: ${input.value}`;
+// }
+// input.addEventListener('input', textInput);
+// ======================================= Task 9 =======================================
