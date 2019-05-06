@@ -101,3 +101,63 @@
   алертом выводился ее src. Обязательно используйте делегирование событий.
 */
 
+// const imgList = document.querySelector('.images');
+// imgList.addEventListener('click', () => alert(event.target.src));
+
+// ======================================= Task 6 =======================================
+
+/*
+  Дан ul, а внутри него произвольное количество li с текстом и кнопкой. 
+  Сделайте так, чтобы по нажатию на кнопку, удалялся тот li в котором
+  она находится. Обязательно используйте делегирование событий.
+*/
+
+// const list = document.querySelector('.list');
+
+// function deletionLi (event) {
+//   event.preventDefault();
+//   let target = event.target;
+//   if (target.nodeName !== 'BUTTON') return;
+//   target.parentNode.remove();
+// }
+// list.addEventListener('click', deletionLi);
+// ======================================= Task 7 =======================================
+
+/*
+  Дан набор инпутов. Сделайте так, чтобы при потере фокуса все 
+  инпуты проверяли свое содержимое на правильное количество символов. 
+  
+  - Сколько символов должно быть в инпуте, указывается в атрибуте data-length. 
+  - Если введено подходящее количество, то outline инпута становится зеленым, 
+    если неправильное - красным. Для добавления стилей, на вкладке CSS есть стили valid и invalid
+*/
+
+// const inputList = document.querySelector('.input-list');
+// inputList.addEventListener('focusout', checkInput);
+
+// function checkInput(elem) {
+//   let elemValue = elem.target.value;
+//   ['valid', 'invalid'].forEach((k) => elem.target.classlist.remove(k));
+  
+//   elemValue.length === Number(elem.target.dataset.length) ? elem.target.classlist.add('valid') : elem.target.classlist.add('invalid');
+// }
+
+// let inputParent =  document.querySelector('.input-list');
+
+// function getResult (el) {
+//   el.target.addEventListener('blur', verification);
+// }
+
+// function verification (event) {
+//   let target = event.target;
+//   if (target.value.length === +target.dataset.length) {
+//     target.classList.remove('invalid');
+//     target.classList.add('valid');
+//   } else {
+//     target.classList.remove('valid');
+//     target.classList.add('invalid');
+//   }
+// }
+// inputParent.addEventListener('click', getResult);
+
+// ======================================= Task 8 =======================================
