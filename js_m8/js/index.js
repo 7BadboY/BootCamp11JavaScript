@@ -182,3 +182,35 @@
 // }
 // input.addEventListener('input', textInput);
 // ======================================= Task 9 =======================================
+
+/*
+  На вкладках HTML и CSS уже готовая верстка модального окна.
+  По умолчанию модальное окно скрыто классом modal-hidden.
+  
+  Напишите скрипт который реализует следующее поведение:
+ 
+  - При клике на кнопке с надписью "Open Modal", модальное окно с классом modal, 
+    должно появляться. Для этого необходимо убрать класс modal-hidden. 
+    Для выбора модального модального окна используйте класс js-modal-backdrop
+ 
+  - При открытом модальном окне, клик на кнопку с крестиком (data-action="close-modal")
+    или на серый фон с прозрачностью (js-modal-backdrop), модальное окно должно закрываться.
+*/
+
+let buttonToOpen = document.querySelector('.btn');
+let modalWindow = document.querySelector('.modal');
+let closet = document.querySelector('[data-action="close-modal"]');
+
+
+function open () {
+  modalWindow.classList.remove('modal-hidden'); 
+}
+
+function close (event) {
+ if (event.target === closet || event.target === modalWindow) {
+  modalWindow.classList.add('modal-hidden');
+ }
+}
+
+modalWindow.addEventListener('click', close);
+buttonToOpen.addEventListener('click', open);
