@@ -197,20 +197,37 @@
     или на серый фон с прозрачностью (js-modal-backdrop), модальное окно должно закрываться.
 */
 
-let buttonToOpen = document.querySelector('.btn');
-let modalWindow = document.querySelector('.modal');
-let closet = document.querySelector('[data-action="close-modal"]');
+// let buttonToOpen = document.querySelector('.btn');
+// let modalWindow = document.querySelector('.modal');
+// let closet = document.querySelector('[data-action="close-modal"]');
 
 
-function open () {
-  modalWindow.classList.remove('modal-hidden'); 
-}
+// function open () {
+//   modalWindow.classList.remove('modal-hidden'); 
+// }
 
-function close (event) {
- if (event.target === closet || event.target === modalWindow) {
-  modalWindow.classList.add('modal-hidden');
- }
-}
+// function close (event) {
+//  if (event.target === closet || event.target === modalWindow) {
+//   modalWindow.classList.add('modal-hidden');
+//  }
+// }
+// modalWindow.addEventListener('click', close);
+// buttonToOpen.addEventListener('click', open);
 
-modalWindow.addEventListener('click', close);
-buttonToOpen.addEventListener('click', open);
+// ======================================= Task 10 =======================================
+
+/*
+  Ознакомьтесь с HTML и CSS.
+  
+  Есть меню навигации, необходимо написать скрипт, который
+  при клике на пункт меню добавит ему класс active,
+  таким образом выделив текущую (активную) ссылку,
+  при этом убрав его у всех остальных элементов меню.
+  
+  Пунктов меню может быть произвольное количество, используйте
+  прием делегирование событий. Учтите клик по самому ul, его
+  необходимо игнорировать.
+  
+  При клике по ссылкам не должна перезагружаться страница!
+*/
+
