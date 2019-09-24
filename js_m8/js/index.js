@@ -56,16 +56,87 @@
 */
 
 
-const imageGallery [
-  {preview: "", fullView: "", alt: ""},
-  {preview: "", fullView: "", alt: ""},
-  {preview: "", fullView: "", alt: ""},
-  {preview: "", fullView: "", alt: ""},
-  {preview: "", fullView: "", alt: ""},
-  {preview: "", fullView: "", alt: ""},
-  {preview: "", fullView: "", alt: ""},
-  {preview: "", fullView: "", alt: ""}
-];
+const imageGallery = [{
+  preview: "img/Photo-1.jpg",
+  fullview: "img/Photo-1-large.jpg",
+  alt: 'three girls staing togather'
+}, {
+  preview: "img/Photo-2.jpg",
+  fullview: "img/Photo-2-large.jpg",
+  alt: "two hot girls huging"
+}, {
+  preview: "img/Photo-3.jpg",
+  fullview: "img/Photo-3-large.jpg",
+  alt: "sporty girls gives five"
+}, {
+  preview: "img/Photo-4.jpg",
+  fullview: "img/Photo-4-large.jpg",
+  alt: "two girls lay on floor, watch throo glases"
+}, {
+  preview: "img/Photo-5.jpg",
+  fullview: "img/Photo-5-large.jpg",
+  alt: "three girls huging togather"
+}, {
+  preview: "img/Photo-6.jpg",
+  fullview: "img/Photo-6-large.jpg",
+  alt: "three sporty girls huging togather"
+}, {
+  preview: "img/Photo-7.jpg",
+  fullview: "img/Photo-7-large.jpg",
+  alt: "the girls are training"
+}, {
+  preview: "img/Photo-8.jpg",
+  fullview: "img/Photo-8-large.jpg",
+  alt: "girls from support group"
+}, {
+  preview: "img/Photo-9.jpg",
+  fullview: "img/Photo-9-large.jpg",
+  alt: "cute girl lay down on the grass"
+}];
+
+createPreview(imageGallery);
+
+const preview = document.querySelector('.preview');
+preview.addEventListener('click', showImg);
+
+function createPreview(arr) {
+  const gallery = document.querySelector('.js-image-gallery');
+  const fullview = document.createElement('div');
+  fullview.classList.add('fullview');
+  gallery.appendChild(fullview);
+
+  const preview = document.createElement('ul');
+  preview.classList.add('preview');
+
+  arr.forEach(img => {
+    const item = document.createElement('li');
+    preview.appendChild(item);
+    const image = document.createElement('img');
+    image.setAttribute('src', img.preview);
+    image.setAttribute('data-fullview', img.fullview);
+    image.setAttribute('alt', img.alt);
+    item.appendChild(image);
+  });
+
+  gallery.appendChild(preview);
+  const list = document.querySelectorAll('li > img');
+  const imageFullview = document.createElement('img');
+  imageFullview.classList.add('fullview__img');
+  imageFullview.setAttribute('src', list[0].dataset.fullview);
+  imageFullview.setAttribute('alt', list[0].alt);
+  fullview.appendChild(imageFullview);
+}
+
+function showImg(event) {
+  const target = event.target;
+  if (target.nodeMode !== 'IMG')
+    return;
+  const fullViewImg = document.querySelector('fullview > img');
+  fullViewImg.src = target.dataset.fullview;
+  fullViewImg.alt = target.alt;
+  document.querySelectorAll('preview > li > img').forEach(el > el === target ? el.classList.add('hover') : el.classList.remove('hover'));
+}
+
 
 
 // ======================================= Task 1 =======================================
@@ -207,7 +278,7 @@ const imageGallery [
 // function checkInput(elem) {
 //   let elemValue = elem.target.value;
 //   ['valid', 'invalid'].forEach((k) => elem.target.classlist.remove(k));
-  
+
 //   elemValue.length === Number(elem.target.dataset.length) ? elem.target.classlist.add('valid') : elem.target.classlist.add('invalid');
 // }
 
@@ -299,4 +370,3 @@ const imageGallery [
   
   При клике по ссылкам не должна перезагружаться страница!
 */
-
